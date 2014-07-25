@@ -1,5 +1,5 @@
 /*
-Theme Name: Twenty Thirteen #ab14 child theme
+Theme Name: Twenty Thirteen RV Lenguas child theme
 Theme URI: http://wordpress.org/themes/twentythirteen
 Author: the WordPress team + Jeremy Clarke
 Author URI: http://wordpress.org/
@@ -15,71 +15,8 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url("../twentythirteen/style.css");
-@import url("../twentythirteen/rtl.css");
 
-/*Google fonts for 'Droid Arabic Kufi' and 'Ubuntu'*/
-@import  "http://fonts.googleapis.com/earlyaccess/droidarabickufi.css";
-@import  "http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic";
 
-/*http://www.google.com/fonts/earlyaccess*/
-/*In-Post RTL classes*/
-
-/*Make default and .rtl text use Droid Arabic*/
-h1, h2, h3, h4, h5, h6m,
-.site-description,
-.format-link .entry-title,
-.attachment .entry-title,
-.author-description .author-title,
-.archive-title,
-.archive-meta,
-.page-title,
-.comments-title,
-.comment-reply-title,
-.widget .widget-title,
-.menu-toggle,
-html,
-button,
-input,
-select,
-textarea,
-.rtl{
-	font-family: 'Droid Arabic Kufi', 'Ubuntu', sans-serif;
-}
-/*Use Ubuntu for LTR and override heading font*/
-.ltr,
-.ltr h1, .ltr h2, .ltr h3, .ltr h4, .ltr h5 {
-	font-family: 'Ubuntu', sans-serif;
-}
-/*Remove italic from everything because Droid Arabic doesn't support it''*/
-blockquote,
-address,
-.wp-caption .wp-caption-text,
-.entry-caption,
-.gallery-caption,
-.site-description,
-.nav-menu .current_page_item > a,
-.nav-menu .current_page_ancestor > a,
-.nav-menu .current-menu-item > a,
-.nav-menu .current-menu-ancestor > a,
-.page-links,
-.format-link .entry-title,
-.format-quote blockquote,
-.format-status .entry-content,
-.attachment .entry-title,
-.paging-navigation a,
-.post-navigation,
-.author-description .author-title,
-.archive-title,
-.archive-meta,
-.page-title,
-.comments-title,
-.comment-reply-title,
-.comment-navigation,
-.no-comments,
-.widget .widget-title,
-dfn {
-	font-style: normal;
-}
 
 /*Make Links Blue*/
 .nav-menu .current_page_item > a,
@@ -110,30 +47,6 @@ dfn {
 	padding-right: 20px;
 }
 
-/*Make bold stuff 100 to use light versions of Droid Arabic and Ubuntu*/
-h1, h2, h3, h4, h5, h6, .site-title, .entry-title {
-	font-weight: 100;
-}
-/*General LTR class for use in posts/widgets*/
-.ltr{
-	text-align: left;
-	direction: ltr;
-}
-.ltr caption, .ltr th, .ltr td {
-	text-align: left;
-	direction: ltr;
-}
-.ltr ol, .ltr ul {
-padding: 0 0 0 40px;
-}
-
-/*In-post RTL classes for LTR posts*/
-.entry .arabic,
-.entry .hebrew,
-.entry .rtl {
-	text-align: right;
-	direction: rtl;
-}
 
 /*Thick bottom margin for floated images and captions*/
 img.alignleft,
@@ -169,14 +82,17 @@ h1 {
 }
 
 /*Insert our logo in the site header*/
+.site-header {
+	background-size: cover;
+}
 .site-header .home-link {
-	background-image: url(ab14-logo-400-shadow.png);
-	background-size: 129px;
-	background-position: 28px center;
-	background-repeat: no-repeat;
-	padding-left: 170px; /*Space for logo*/
+	/*background-image: url(ab14-logo-400-shadow.png);*/
+	/*background-size: 129px;*/
+	/*background-position: 28px center;*/
+	/*background-repeat: no-repeat;*/
+/*	padding-left: 170px; Space for logo*/
 	/*text-shadow: 2px 2px 2px #5A4614	;*/
-	text-shadow: 2px 2px 2px #334049;
+	text-shadow: 2px 2px 2px #2F1B05;
 
 }
 .main-sponsor {
@@ -207,14 +123,14 @@ h1 {
 @media (max-width: 999px) {
 	/*Make header icon, title and desc smaller*/
 	.site-header .home-link {
-		min-height: 140px;
-		max-width: 680px;
-		background-size: 100px;
-		padding-left: 142px; /*Space for logo*/
+		/*min-height: 140px;*/
+		/*max-width: 680px;*/
+		/*background-size: 100px;*/
+/*		padding-left: 142px; Space for logo*/
 	}
 	.site-title {
-		font-size: 36px;
-		padding-top: 24px;
+/*		font-size: 36px;
+		padding-top: 24px;*/
 	}
 	.site-description {
 		font-size: 20px;
@@ -222,47 +138,51 @@ h1 {
 }
 
 @media (max-width: 643px) {
-
+	.site-header .home-link {
+		min-height: 160px;
+	}
+	.site-title {
+		padding-top: 50px;
+	}
 }
-
 @media (max-width: 560px) {
 	/*Make header icon, title and desc smaller*/	
 	.site-header .home-link {
-		min-height: 120px;
-		max-width: 680px;
-		background-size: 80px;
-		padding-left: 122px; /*Space for logo*/
+		/*min-height: 120px;*/
+		/*max-width: 680px;*/
+		/*background-size: 80px;*/
+		/*padding-left: 122px; Space for logo*/
 	}
 	.site-title {
-		font-size: 28px;
-		padding-top: 24px;
+/*		font-size: 28px;
+		padding-top: 24px;*/
 	}
 	.site-description {
-		font-size: 16px;
+		/*font-size: 16px;*/
 	}
 }
 @media (max-width: 450px) {
 	/*Make header icon, title and desc smaller*/	
 	.site-header .home-link {
-		min-height: 100px;
+/*		min-height: 100px;
 		max-width: 680px;
 		background-size: 60px;
-		padding-left: 102px; /*Space for logo*/
+		padding-left: 102px; Space for logo*/
 	}
 	.site-title {
-		font-size: 24px;
+		/*font-size: 24px;*/
 	}
 	.site-description {
-		font-size: 14px;
+		/*font-size: 14px;*/
 	}	
 }
 @media (max-width: 400px) {
 	/*Make header icon, title and desc smaller*/	
 	.site-title {
-		font-size: 20px;
+		/*font-size: 20px;*/
 	}
 	.site-description {
-		font-size: 14px;
+		/*font-size: 14px;*/
 	}	
 }
 @media (max-width: 359px) {
