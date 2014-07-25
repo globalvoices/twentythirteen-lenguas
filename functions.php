@@ -1,7 +1,9 @@
 <?php
 
 /**
- * Functions.php file for twentythirteen-ab14
+ * Functions.php file for twentythirteen-lenguas 
+ * 
+ * based on ab14 child theme but with the ar/rtl stuff removed
  */
 
 /**
@@ -10,13 +12,13 @@
 if (function_exists('gv_get_dir')) :
 
 	/**
-	 * Filter the og:image (facebook/g+) default icon to be an Advocacy logo
+	 * Filter the og:image (facebook/g+) default icon to be an RV logo
 	 * 
 	 * @param string $icon Default icon
 	 * @return string desired icon
 	 */
 	function gvadvocacy_theme_gv_og_image_default($icon) {
-		return get_stylesheet_directory_uri() . "/ab14-icon-800.png";
+		return "http://static.globalvoices.s3.amazonaws.com/img/tmpl/rv-logo-square-600.png";
 	}
 	add_filter('gv_og_image_default', 'gvadvocacy_theme_gv_og_image_default');
 	
@@ -26,25 +28,6 @@ if (function_exists('gv_get_dir')) :
 	add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
 	
 endif;
-
-/**
- * Filter post class to add .ltr if the 'gv-ltr' postmeta is true
- * 
- * Expects a metabox in the post editor to check for "LTR". 
- * 
- * @param string $classes Other classes that will be shown
- * @param string $class Classes specified in the post_class() call (NOT IMPORTANT)
- * @param integer $post_id 
- * @return string List of classes with ours added if necessary
- */
-function gv_filter_post_classes_ltr ($classes, $class, $post_id) {
-
-	$is_rtl = get_post_meta($post_id, 'gv-ltr', true);
-	if ($is_rtl)
-		$classes[] = 'ltr';
-	return $classes;
-}
-add_filter('post_class', 'gv_filter_post_classes_ltr', 10, 3);
 
 /**
  * Filter post class to add .extra-wide if the 'gv-extra-wide' postmeta is true
@@ -186,14 +169,7 @@ function gv_custom_metadata_manager_admin_init() {
 		'label' => 'Post Settings (Global Voices)',
 		'priority' => 'high',
 	));
-	/**
-	 * Extra-wide switch, pages only
-	 */
-	x_add_metadata_field( 'gv-ltr', array('post', 'page'), array(
-		'group' => 'gv_custom_metadata_posts',
-		'label' => 'ENGLISH/LTR: Check this box to display this post as left-to-right (Assumes the site is RTL/right-to-left)',
-		'field_type' => 'checkbox',
-	));
+	
 	/**
 	 * Extra-wide switch, pages only
 	 */
