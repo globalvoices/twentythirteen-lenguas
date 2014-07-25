@@ -188,20 +188,20 @@ if (is_object($gv)) :
 	 * Default plugins we always want on (will be activated automatically)
 	 * see gv_activate_default_plugins()
 	 */
-	$gv->default_plugins = array (
-		'wp-print/wp-print.php',
+//	$gv->default_plugins = array (
+//		'wp-print/wp-print.php',
 //		'akismet/akismet.php',
-		'contact-form-7/wp-contact-form-7.php',
-		'really-simple-captcha/really-simple-captcha.php',
-		'google-analyticator/google-analyticator.php',
-		'gv-plugin/gv-plugin.php',
-		'collapsing_page_menu/collapsing_page_menu.php',
-		'capsman/capsman.php',
-		'limit-login-attempts/limit-login-attempts.php',		
-		'wordpress-mobile-edition/wp-mobile.php',
-		'custom-metadata/custom_metadata.php',
+//		'contact-form-7/wp-contact-form-7.php',
+//		'really-simple-captcha/really-simple-captcha.php',
+//		'google-analyticator/google-analyticator.php',
+//		'gv-plugin/gv-plugin.php',
+//		'collapsing_page_menu/collapsing_page_menu.php',
+//		'capsman/capsman.php',
+//		'limit-login-attempts/limit-login-attempts.php',		
+//		'wordpress-mobile-edition/wp-mobile.php',
+//		'custom-metadata/custom_metadata.php',
 //		'wp-status-notifier/status-notifier.php'
-	);
+//	);
 
 	// Activate Debug Bar automatically if the dev site constant was set
 	if (defined('GV_IS_DEV_SITE') AND GV_IS_DEV_SITE)
